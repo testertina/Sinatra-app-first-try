@@ -4,25 +4,25 @@ class BandsController < Sinatra::Base
   	register Sinatra::Reloader
 	end
 	# INDEX rest
-	get "/band" do 
-
-	end
-	# SHOW rest
-	get "/band/:id" do 
-	end
-	# CREATE rest
-	post "/band" do 
-	end
-	# UPDATE rest
-	put "/band/:id" do
-	end
-	# DELETE rest
-	delete "/band/:id" do
+	get "/bands" do 
 	end
 	# NEW rest
-	get "/band/new" do
+	get "/bands/new" do
 	end
+	# SHOW rest
+	get "/bands/:id" do 
+	end
+	# CREATE rest
+	post "/bands" do 
+	end
+	# UPDATE rest
+	put "/bands/:id" do
+	end
+	# DELETE rest
+	delete "/bands/:id" do
+	end
+
 	# EDIT rest
-	get "/band/:id/edit" do 
+	get "/bands/:id/edit" do 
 	end
 end
