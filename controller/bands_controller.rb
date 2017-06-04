@@ -1,11 +1,13 @@
 class BandsController < Sinatra::Base
 
 	configure :development do
+		set :public_folder, 'public'
   	register Sinatra::Reloader
 	end
 	# INDEX rest
+	
 	get "/bands" do 
-		"<h1>Awesome Bands</h1>"
+		send_file 'public/index.html'
 	end
 	# NEW rest
 	get "/bands/new" do
