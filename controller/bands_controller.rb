@@ -8,6 +8,7 @@ class BandsController < Sinatra::Base
 	
 	get "/bands" do 
 		send_file 'public/index.html'
+		
 	end
 	# NEW rest
 	get "/bands/new" do
@@ -15,11 +16,15 @@ class BandsController < Sinatra::Base
 	end
 	# SHOW rest
 	get "/bands/:id" do 
+		send_file 'public/list_of_bands.html'
+		
 		"Return awesome band name: #{params[:id]}"
 	end
 	# CREATE rest
 	post "/bands" do 
-		"Create an awesome band"
+		# @category_object=Category.find_by(params[:category_selection])
+  # 	@category_object.bands.create(params[:bands])
+  # 	redirect to("/category/#{@category_object.name}")
 	end
 	# UPDATE rest
 	put "/bands/:id" do
